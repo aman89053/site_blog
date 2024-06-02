@@ -84,24 +84,6 @@ if(isset($_POST["Submit"])){
                 <li class="nav-item">
                     <a href="MyProfile.php" class="nav-link"><i class="fas fa-user-tie"></i> My Profile</a>
                 </li>
-                <li class="nav-item">
-                    <a href="Dashboard.php" class="nav-link">Dashboard</a>
-                </li>
-                <li class="nav-item">
-                    <a href="Posts.php" class="nav-link">Posts</a>
-                </li>
-                <li class="nav-item">
-                    <a href="Categories.php" class="nav-link">Categories</a>
-                </li>
-                <li class="nav-item">
-                    <a href="Admins.php" class="nav-link">Manage Admins</a>
-                </li>
-                <li class="nav-item">
-                    <a href="Comments.php" class="nav-link">Comments</a>
-                </li>
-                <li class="nav-item">
-                    <a href="Blog.php?page=1" class="nav-link">Live Blog</a>
-                </li>
             </ul>
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item ">

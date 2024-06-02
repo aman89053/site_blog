@@ -77,7 +77,7 @@ Confirm_Login();
                     <a href="Categories.php" class="btn btn-info btn-block"><i class="fas fa-folder-plus"></i>Add New Category</a>
                 </div>
                 <div class="col-lg-3 mb-2">
-                    <a href="#" class="btn btn-warning btn-block"><i class="fas fa-user-plus"></i>Add New Admin</a>
+                    <a href="Admins.php" class="btn btn-warning btn-block"><i class="fas fa-user-plus"></i>Add New Users</a>
             </div>
             <div class="col-lg-3 mb-2">
                     <a href="Comments.php" class="btn btn-success btn-block"><i class="fas fa-check"></i>Approve Comments</a>

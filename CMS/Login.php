@@ -21,12 +21,22 @@ if(isset($_POST["Submit"])){
             $_SESSION["UserId"]=$Found_Account["id"];
             $_SESSION["Username"]=$Found_Account["username"];
             $_SESSION["AdminName"]=$Found_Account["aname"];
+            $_SESSION["role"] = $Found_Account["rolename"];
             $_SESSION["SuccessMessage"]="Welcome ".$_SESSION["AdminName"]."!";
-            if(isset($_SESSION["TrackingURL"])){
-                Redirect_to($_SESSION["TrackingURL"]);
-            }else{
+           // if(isset($_SESSION["TrackingURL"])){
+            //    Redirect_to($_SESSION["TrackingURL"]);
+           // }else{
+           // Redirect_to("Dashboard.php");
+           // }
+           if ($_SESSION["role"] == "admin") {
             Redirect_to("Dashboard.php");
-            }
+        } elseif ($_SESSION["role"] == "author") {
+            Redirect_to("Author.php");
+        } elseif ($_SESSION["role"] == "subscriber") {
+            Redirect_to("Subscriber.php");
+        } else {
+            Redirect_to("Login.php"); // Fallback if role is not recognized
+        }
         }else{
             $_SESSION["ErrorMessage"]="Incorrect Username/Password";
             Redirect_to("Login.php");

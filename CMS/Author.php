@@ -34,21 +34,6 @@ Confirm_Login();
                     <a href="MyProfile.php" class="nav-link"><i class="fas fa-user-tie"></i> My Profile</a>
                 </li>
                 <li class="nav-item">
-                    <a href="Author.php" class="nav-link">Dashboard</a>
-                </li>
-                <li class="nav-item">
-                    <a href="Posts.php" class="nav-link">Posts</a>
-                </li>
-                <li class="nav-item">
-                    <a href="Categories.php" class="nav-link">Categories</a>
-                </li>
-                <li class="nav-item">
-                    <a href="Admins.php" class="nav-link">Manage Admins</a>
-                </li>
-                <li class="nav-item">
-                    <a href="Comments.php" class="nav-link">Comments</a>
-                </li>
-                <li class="nav-item">
                     <a href="Blog.php?page=1" class="nav-link">Live Blog</a>
                 </li>
             </ul>
@@ -92,7 +77,7 @@ Confirm_Login();
                         <h1 class="lead">Posts</h1>
                         <h4 class="display-5"><i class="fab fa-readme"></i> 
                         <?php
-                       // TotalPosts();
+                        TotalPosts();
                         ?>
                         </h4>
                     </div>
@@ -103,7 +88,7 @@ Confirm_Login();
                         <h1 class="lead">Categories</h1>
                         <h4 class="display-5"><i class="fas fa-folder"></i> 
                         <?php
-                       // TotalCategories();
+                       TotalCategories();
                         ?>
                         </h4>
                     </div>
@@ -111,10 +96,10 @@ Confirm_Login();
 
                 <div class="card text-center bg-dark text-white mb-3">
                     <div class="card-body">
-                        <h1 class="lead">Admins</h1>
+                        <h1 class="lead">Users</h1>
                         <h4 class="display-5"><i class="fas fa-users"></i> 
                         <?php
-                        //TotalAdmins();
+                        TotalAdmins();
                         ?>
                         </h4>
                     </div>
@@ -124,7 +109,7 @@ Confirm_Login();
                         <h1 class="lead">Comments</h1>
                         <h4 class="display-5"><i class="fas fa-comments"></i> 
                         <?php
-                        //TotalComments();
+                        TotalComments();
                         ?>
                         </h4>
                     </div>
@@ -140,7 +125,7 @@ Confirm_Login();
                             <th>Title</th>
                             <th>Date & Time</th>
                             <th>Author</th>
-                            <th>Comments</th>
+                            <th>preview</th>
                             <th>Details</th>
                         </tr>
                     </thead>
@@ -164,7 +149,7 @@ Confirm_Login();
                             <td><?php echo $DateTime; ?></td>
                             <td><?php echo $Author; ?></td>
                             
-                            <td><a href="FullPost.php?id=<?php echo $PostId; ?>"><span class="btn btn-info">view</span></a></td>
+                            <td><a href="Blog.php?page<?php echo $PostId; ?>"><span class="btn btn-info">view</span></a></td>
                         </tr>
                     </tbody>
                     <?php } ?>
